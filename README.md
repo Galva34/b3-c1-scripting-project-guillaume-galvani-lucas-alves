@@ -1,1 +1,1 @@
-# b3-c1-scripting-projet-guillaume-galvani-lucas-alves
+# b3-c1-scripting-project-guillaume-galvani-lucas-alves
