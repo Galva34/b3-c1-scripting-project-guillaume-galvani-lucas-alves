@@ -42,6 +42,3 @@ for row in myReader:
 col_2 = [i[2] for i in table]
 col_1 = [i[1] for i in table]
 
-#On remplace les virgules par les points pour faire l'addition
-new_list = [element.replace(',','.') for element in col_2]
-new_list2 = [element.replace(',','.') for element in col_1]
