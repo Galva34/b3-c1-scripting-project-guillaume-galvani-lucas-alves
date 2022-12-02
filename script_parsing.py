@@ -42,3 +42,29 @@ for row in myReader:
 col_2 = [i[2] for i in table]
 col_1 = [i[1] for i in table]
 
+#On fait les boucles pour l'addition, si il peut il le fait, si il rencontre une
+#erreur (string ou autre) il passe et fait la suivante, on va également arrondir
+#avec round pour éviter les chiffres a virgules a rallonge et pour avoir un
+#calcul précis
+
+for addition in new_list:
+
+    try:
+        col_addition+=float(addition)
+        round(col_addition,1)
+
+    except:
+        pass
+
+for addition2 in new_list2:
+    try:
+        col_addition_2+=float(addition2)
+        round(col_addition_2,1)
+    except:
+        pass
+
+print(round(col_addition,1))
+print(round(col_addition_2,1))
+print(round(col_addition + col_addition_2,1))
+
+
