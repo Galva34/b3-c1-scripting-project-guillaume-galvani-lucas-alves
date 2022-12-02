@@ -7,11 +7,11 @@ col_addition_2 = 0
 
 
 #lire le fichier csv source
-with open('conso-annuelles.csv', 'r') as f:
+with open('conso-annuelles_v1.csv', 'r') as f:
     obj = csv.reader(f,delimiter=';')
 
 #extraire données vers fichier csv
-    with open('conso-clan.csv', 'w',newline='') as resultat:
+    with open('conso-clean.csv', 'w',newline='') as resultat:
         writer = csv.writer(resultat,delimiter=';')
         
 #Supprimer les lignes avec des cellules vides pour se faire on va faire
@@ -31,7 +31,7 @@ with open('conso-annuelles.csv', 'r') as f:
 
 
 #Reouvre le fichier après modificiation
-f= open (r"output.csv")
+f= open (r"conso-clean.csv")
 myReader = csv.reader(f,delimiter=';')
 
 #Lecture du CSV dans un tableau
