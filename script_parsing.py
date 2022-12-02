@@ -28,3 +28,17 @@ with open('conso-annuelles.csv', 'r') as f:
                     break
             if not vide:
                 writer.writerow([l[0], l[2], l[3], l[4]])
+
+
+#Reouvre le fichier après modificiation
+f= open (r"output.csv")
+myReader = csv.reader(f,delimiter=';')
+
+#Lecture du CSV dans un tableau
+for row in myReader:
+    table.append(row)
+    
+#On sélectionner les colonnes désirés pour l'addition
+col_2 = [i[2] for i in table]
+col_1 = [i[1] for i in table]
+
