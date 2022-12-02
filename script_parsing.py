@@ -5,6 +5,7 @@ col_addition = 0
 col_addition_2 = 0
 
 
+
 #lire le fichier csv source
 with open('conso-annuelles.csv', 'r') as f:
     obj = csv.reader(f,delimiter=';')
