@@ -1,6 +1,6 @@
 # début script
 import csv
-From csv import DictWriter
+from csv import DictWriter
 
 table = []
 col_addition = 0
