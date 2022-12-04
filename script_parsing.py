@@ -70,3 +70,14 @@ for addition2 in new_list2:
 print(round(col_addition,1))
 print(round(col_addition_2,1))
 print(round(col_addition + col_addition_2,1))
+
+#Ajout de l'header et du contenu désiré pour utiliser DictWriter
+headerCSV = ['Appareil suivi','Consommation annuelle AN1','Consommation annuelle AN2','Type']
+dict={'Appareil suivi':'Total Consommations','Consommation annuelle AN1':round(col_addition,1),'Consommation annuelle AN2':round(col_addition_2,1)}
+
+#Ouverture du fichier avec l'option A pour ajouter a la fin du fichier le résultat de chaque
+# année sur les consommations
+with open('conso-clean.csv','a', newline='') as f_object:
+    dictwriter_object = DictWriter(f_object, fieldnames=headerCSV, delimiter=";")
+    dictwriter_object.writerow(dict)
+    f_object.close()
